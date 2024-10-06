@@ -1,6 +1,3 @@
-import os
-import sys
-sys.path.append(os.getcwd())
 from src.product import Product
 from src.category import Category
 
