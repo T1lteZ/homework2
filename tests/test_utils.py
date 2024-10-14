@@ -1,6 +1,4 @@
 import pytest
-from src.product import Product
-from src.category import Category
 from src.utils import Smartphone, LawnGrass
 
 
@@ -46,12 +44,10 @@ def test_lawn_grass(lawngrass1, lawngrass2):
 
 
 def test_add_lawn_grass(lawngrass1, lawngrass2):
-
     assert lawngrass1 + lawngrass2 == 16750.0
 
 
 def test_add_lawn_grass_error(lawngrass1):
-
     with pytest.raises(TypeError):
         lawngrass1 + 1
 
