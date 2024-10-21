@@ -67,3 +67,18 @@ def test_category_init(category_, category_2):
 
 def test_category_str(str__):
     assert str(str__) == "Смартфоны, количество продуктов: 13 шт."
+
+
+def test_category_middle_price(category_, category_2):
+    assert category_.middle_price() == 140333.33333333334
+    assert category_2.middle_price() == 123000
+
+
+def test_category_middle_price_empty():
+    cat = Category(
+        name="Телевизоры",
+        description="Современный телевизор, который позволяет наслаждаться просмотром, "
+        "станет вашим другом и помощником",
+        products=[],
+    )
+    assert cat.middle_price() == 0
